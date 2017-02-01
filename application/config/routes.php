@@ -56,4 +56,4 @@ $route['sleep'] = 'First/zzz';
 $route['last'] = '/last/Welcome/index';
 $route['lock/(:any)/(:any)'] = "welcome/shucks";
 $route['comp\d+/wisdom'] = "wise/bingo";
-
+$route['(^[a-zA-Z]{4})/bingo'] = 'Bingo/index';
