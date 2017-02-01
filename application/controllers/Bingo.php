@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Bingo extends Application
 {
 
 	function __construct()
@@ -19,15 +19,8 @@ class Welcome extends Application
 		$this->data['pagebody'] = 'homepage';
 
 		// build the list of authors, to pass on to our view
-		$source = $this->quotes->all();
-		$authors = array ();
-		foreach ($source as $record)
-		{
-			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
-		}
-		$this->data['authors'] = $authors;
-
-		$this->render();
+		//$source = $this->quotes->all();
+                $record = $this->quotes->get('5');
+                    echo $record['what'];
 	}
-
 }
