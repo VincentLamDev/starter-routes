@@ -59,6 +59,7 @@ $route['comp\d+/wisdom'] = "wise/bingo";
 $route['(^[a-zA-Z]{4})/bingo'] = 'Bingo/index';
 
 $route['dunno'] = function() {
+        
         $files = glob('../data' . '/*.*');
         $file = array_rand($files);
 
