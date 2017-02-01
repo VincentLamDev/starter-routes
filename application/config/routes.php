@@ -57,3 +57,17 @@ $route['last'] = '/last/Welcome/index';
 $route['lock/(:any)/(:any)'] = "welcome/shucks";
 $route['comp\d+/wisdom'] = "wise/bingo";
 $route['(^[a-zA-Z]{4})/bingo'] = 'Bingo/index';
+
+$route['dunno'] = function() {
+        
+    
+        $files = glob('../data' . '/*.*');
+        $file = array_rand($files);
+
+        $source = $files[$file];
+	// set the mime type for that image (jpeg, png, etc)
+	header("Content-type: image/jpg"); 
+	header('Content-Disposition: inline');
+	readfile($source); // dish it
+	die(); // and we don't have to go any further
+};   
