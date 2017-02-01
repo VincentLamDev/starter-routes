@@ -58,10 +58,7 @@ $route['lock/(:any)/(:any)'] = "welcome/shucks";
 $route['comp\d+/wisdom'] = "wise/bingo";
 $route['(^[a-zA-Z]{4})/bingo'] = 'Bingo/index';
 
-<<<<<<< HEAD
 $route['dunno'] = function() {
-        
-    
         $files = glob('../data' . '/*.*');
         $file = array_rand($files);
 
@@ -72,5 +69,4 @@ $route['dunno'] = function() {
 	readfile($source); // dish it
 	die(); // and we don't have to go any further
 };   
-=======
->>>>>>> 2066bd3e2c94fc4f25d1ac1ac67701e059978cc2
+
