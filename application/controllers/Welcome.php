@@ -30,4 +30,11 @@ class Welcome extends Application
 		$this->render();
 	}
 
+	public function shucks() 
+	{
+			$src = $this->quotes->all();
+            $quoteArray = $this->quotes->get('2');
+            echo $quoteArray['what'];
+	}
+
 }
